@@ -1,0 +1,76 @@
+{
+  "name": "react-testing-examples",
+  "version": "1.0.0",
+  "description": "auto-generated package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=testing karma start --single-run",
+    "test:cov": "COVERAGE=true NODE_ENV=testing karma start --single-run",
+    "lint": "eslint --ext .js,.jsx ./",
+    "devserver": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.dev.js",
+    "expserver": "node server.js",
+    "start": "npm run devserver | npm run expserver",
+    "build": "webpack --config webpack.config.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wpultz/webpack-demo"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "enzyme",
+    "karma",
+    "webpack"
+  ],
+  "author": "wpultz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wpultz/webpack-demo/issues"
+  },
+  "homepage": "https://github.com/wpultz/webpack-demo#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.8.0",
+    "classnames": "^2.2.5",
+    "express": "^4.14.0",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "redux-form": "^5.2.3",
+    "redux-logger": "^2.6.1",
+    "redux-thunk": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.8.0",
+    "babel-eslint": "^6.0.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "enzyme": "^2.3.0",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.8.0",
+    "eslint-plugin-jsx-a11y": "^1.2.0",
+    "eslint-plugin-react": "^5.1.1",
+    "expect": "^1.20.1",
+    "expect-immutable": "0.0.3",
+    "immutable": "^3.8.1",
+    "isparta-loader": "^2.0.0",
+    "karma": "^0.13.22",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-coverage": "^1.0.0",
+    "karma-mocha": "^1.0.1",
+    "karma-mocha-reporter": "^2.0.3",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.4.5",
+    "phantomjs-prebuilt": "^2.1.7",
+    "react-addons-test-utils": "^15.0.2",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
