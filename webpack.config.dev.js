@@ -1,7 +1,6 @@
 require('babel-core/register');
 
 const path = require('path');
-
 const webpack = require('webpack');
 
 module.exports = {
@@ -12,7 +11,8 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'bundles'),
-        filename: '[name].bundle.js'
+        filename: '[name].bundle.js',
+        publicPath: 'http://localhost:8080/bundles/'
     },
     module: {
         loaders: [

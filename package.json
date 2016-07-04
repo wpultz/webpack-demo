@@ -7,12 +7,11 @@
     "test": "NODE_ENV=testing karma start --single-run",
     "test:cov": "COVERAGE=true NODE_ENV=testing karma start --single-run",
     "lint": "eslint --ext .js,.jsx ./",
-    "devserver": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.dev.js",
-    "expserver": "node server.js",
-    "start": "npm run devserver | http-server --port 8000",
+    "devserver": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.dev.js --inline --hot",
+    "start:dev": "npm run devserver | http-server -p 8000",
+    "start": "npm run build | http-server -p 8000",
     "build": "webpack --config webpack.config.dev.js",
-    "build:dev": "webpack --watch --config webpack.config.dev.js",
-    "start:dev": "webpack --watch --config webpack.config.dev.js | http-server --port 8000"
+    "build:dev": "webpack --watch --config webpack.config.dev.js"
   },
   "repository": {
     "type": "git",
