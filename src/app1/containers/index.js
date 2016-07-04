@@ -8,7 +8,6 @@ require('../sass/main.scss');
 const Main = () => {
     return (
         <div>
-            almost there
             <Button>cool beans</Button>
         </div>
     );
