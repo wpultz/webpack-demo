@@ -12,7 +12,7 @@
     "start": "npm run devserver | http-server --port 8000",
     "build": "webpack --config webpack.config.dev.js",
     "build:dev": "webpack --watch --config webpack.config.dev.js",
-    "start:dev": "npm run build:dev | http-server --port 8000"
+    "start:dev": "webpack --watch --config webpack.config.dev.js | http-server --port 8000"
   },
   "repository": {
     "type": "git",
@@ -74,8 +74,10 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.4.5",
+    "node-sass": "^3.8.0",
     "phantomjs-prebuilt": "^2.1.7",
     "react-addons-test-utils": "^15.0.2",
+    "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.0",

@@ -1,6 +1,8 @@
-var path = require('path');
+require('babel-core/register');
 
-var webpack = require('webpack');
+const path = require('path');
+
+const webpack = require('webpack');
 
 module.exports = {
     devtool: 'source-map',
@@ -16,6 +18,7 @@ module.exports = {
         loaders: [
             { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel'] },
             { test: /\.css$/, loader: 'style-loader!css-loader' },
+            { test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader' },
             { test: /\.png$/, loader: 'url-loader?limit=100000' },
             { test: /\.jpg$/, loader: 'file-loader' },
             {
@@ -23,15 +26,15 @@ module.exports = {
                 loader: 'url?limit=10000&mimetype=application/font-woff'
             },
             {
-                test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, 
+                test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'url?limit=10000&mimetype=application/octet-stream'
             },
             {
-                test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, 
+                test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'file'
             },
             {
-                test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, 
+                test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'url?limit=10000&mimetype=image/svg+xml'
             }
         ]
