@@ -9,8 +9,10 @@
     "lint": "eslint --ext .js,.jsx ./",
     "devserver": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.dev.js",
     "expserver": "node server.js",
-    "start": "npm run devserver | npm run expserver",
-    "build": "webpack --config webpack.config.dev.js"
+    "start": "npm run devserver | http-server --port 8000",
+    "build": "webpack --config webpack.config.dev.js",
+    "build:dev": "webpack --watch --config webpack.config.dev.js",
+    "start:dev": "npm run build:dev | http-server --port 8000"
   },
   "repository": {
     "type": "git",
@@ -31,9 +33,11 @@
   "homepage": "https://github.com/wpultz/webpack-demo#readme",
   "dependencies": {
     "babel-polyfill": "^6.8.0",
+    "bootstrap": "^3.3.6",
     "classnames": "^2.2.5",
     "express": "^4.14.0",
     "react": "^15.0.2",
+    "react-bootstrap": "^0.29.5",
     "react-dom": "^15.0.2",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
@@ -49,6 +53,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
+    "css-loader": "^0.23.1",
     "enzyme": "^2.3.0",
     "eslint": "^2.9.0",
     "eslint-config-airbnb": "^9.0.1",
@@ -57,6 +62,7 @@
     "eslint-plugin-react": "^5.1.1",
     "expect": "^1.20.1",
     "expect-immutable": "0.0.3",
+    "file-loader": "^0.9.0",
     "immutable": "^3.8.1",
     "isparta-loader": "^2.0.0",
     "karma": "^0.13.22",
@@ -70,6 +76,8 @@
     "mocha": "^2.4.5",
     "phantomjs-prebuilt": "^2.1.7",
     "react-addons-test-utils": "^15.0.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1"
   }
