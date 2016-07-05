@@ -8,7 +8,6 @@
     "test:cov": "COVERAGE=true NODE_ENV=testing karma start --single-run",
     "lint": "eslint --ext .js,.jsx ./",
     "devserver": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.dev.js --inline --hot",
-    "start:dev": "npm run devserver | http-server -p 8000",
     "start": "npm run build | http-server -p 8000",
     "build": "webpack --config webpack.config.dev.js",
     "build:dev": "webpack --watch --config webpack.config.dev.js"
@@ -76,6 +75,7 @@
     "node-sass": "^3.8.0",
     "phantomjs-prebuilt": "^2.1.7",
     "react-addons-test-utils": "^15.0.2",
+    "react-hot-loader": "^1.3.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",

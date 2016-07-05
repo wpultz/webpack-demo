@@ -6,8 +6,16 @@ const webpack = require('webpack');
 module.exports = {
     devtool: 'source-map',
     entry: {
-        app1: './src/app1/app.js',
-        app2: './src/app2/app.js'
+        app1: [
+            'webpack-dev-server/client?http://localhost:8080',
+            'webpack/hot/only-dev-server',
+            './src/app1/app.js'
+        ],
+        app2: [
+            'webpack-dev-server/client?http://localhost:8080',
+            'webpack/hot/only-dev-server',
+            './src/app2/app.js'
+        ]
     },
     output: {
         path: path.resolve(__dirname, 'bundles'),
@@ -16,7 +24,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel'] },
+            { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['react-hot', 'babel'] },
             { test: /\.css$/, loader: 'style-loader!css-loader' },
             { test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader' },
             { test: /\.png$/, loader: 'url-loader?limit=100000' },
