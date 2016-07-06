@@ -5,9 +5,14 @@ const webpack = require('webpack');
 
 const nodeEnv = JSON.stringify(process.env.NODE_ENV || 'development');
 
-module.exports = {
-    devtool: 'source-map',
-    entry: {
+let entries;
+if (process.env.NODE_ENV === 'production') {
+    entries = {
+        app1: './src/app1/app.js',
+        app2: './src/app2/app.js'
+    };
+} else {
+    entries = {
         app1: [
             'webpack-dev-server/client?http://localhost:8080',
             'webpack/hot/only-dev-server',
@@ -18,7 +23,12 @@ module.exports = {
             'webpack/hot/only-dev-server',
             './src/app2/app.js'
         ]
-    },
+    };
+}
+
+module.exports = {
+    devtool: 'source-map',
+    entry: entries,
     output: {
         path: path.resolve(__dirname, 'bundles'),
         filename: '[name].bundle.js',
