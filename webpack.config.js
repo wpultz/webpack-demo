@@ -1,10 +1,9 @@
-require('babel-core/register');
+/* eslint-disable no-var */
+var path = require('path');
+var webpack = require('webpack');
 
-const path = require('path');
-const webpack = require('webpack');
-
-const nodeEnv = JSON.stringify(process.env.NODE_ENV || 'development');
-
+var nodeEnv = JSON.stringify(process.env.NODE_ENV || 'development');
+/* eslint-enable */
 module.exports = {
     devtool: 'source-map',
     entry: {
