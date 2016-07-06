@@ -72,3 +72,10 @@ another backend server, in this case node `http-server`. Points of interest:
 the bundled js from webpack-dev-server.
 * in [app1.html](app1.html) and [app2.html](app2.html), we are now pointing the
 script tag to the webpack-dev-server publicPath specified in the webpack config.
+
+### Caveat
+
+The `run-with-dev-server` branch does, in fact, point the pages to the
+webpack-dev-server instance. This means that when building your app for
+production, the script tag references would have to point to the locally
+built bundles. There are tools for this that aren't covered here.
