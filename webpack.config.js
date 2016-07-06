@@ -22,7 +22,8 @@ if (process.env.NODE_ENV === 'production') {
             'webpack-dev-server/client?http://localhost:8080',
             'webpack/hot/only-dev-server',
             './src/app2/app.js'
-        ]
+        ],
+        shared: ['react-bootstrap']
     };
 }
 
@@ -74,6 +75,10 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.DefinePlugin({ 'process.env.NODE_ENV': nodeEnv })
+        new webpack.DefinePlugin({ 'process.env.NODE_ENV': nodeEnv }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'shared',
+            filename: 'shared.bundle.js'
+        })
     ]
 };
