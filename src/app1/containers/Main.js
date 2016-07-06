@@ -16,7 +16,7 @@ export default class Main extends React.Component {
         const { thing } = this.props;
         return (
             <div>
-                <Button>ughbeans</Button>
+                <Button>beans</Button>
                 <Thing id={thing} />
             </div>
         );

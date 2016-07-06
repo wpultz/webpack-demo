@@ -59,6 +59,11 @@ module.exports = {
             }
         ]
     },
+    devServer: {
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        }
+    },
     resolve: {
         alias: {
             react: 'react'
