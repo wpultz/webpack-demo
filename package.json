@@ -8,7 +8,8 @@
     "test:cov": "COVERAGE=true NODE_ENV=testing karma start --single-run",
     "lint": "eslint --ext .js,.jsx ./",
     "start:dev": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.js",
-    "build": "webpack --config webpack.config.js"
+    "build:dev": "webpack --config webpack.config.js",
+    "build": "NODE_ENV=production webpack -p --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -29,11 +30,8 @@
   "homepage": "https://github.com/wpultz/webpack-demo#readme",
   "dependencies": {
     "babel-polyfill": "^6.8.0",
-    "bootstrap": "^3.3.6",
     "classnames": "^2.2.5",
-    "express": "^4.14.0",
     "react": "^15.0.2",
-    "react-bootstrap": "^0.29.5",
     "react-dom": "^15.0.2",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
@@ -70,12 +68,8 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.4.5",
-    "node-sass": "^3.8.0",
     "phantomjs-prebuilt": "^2.1.7",
     "react-addons-test-utils": "^15.0.2",
-    "sass-loader": "^4.0.0",
-    "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1"
   }

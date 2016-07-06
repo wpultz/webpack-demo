@@ -3,6 +3,8 @@ require('babel-core/register');
 const path = require('path');
 const webpack = require('webpack');
 
+const nodeEnv = JSON.stringify(process.env.NODE_ENV || 'development');
+
 module.exports = {
     devtool: 'source-map',
     entry: {
@@ -10,8 +12,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'bundles'),
-        filename: '[name].bundle.js',
-        publicPath: 'http://localhost:8080/bundles/'
+        filename: '[name].bundle.js'
     },
     module: {
         loaders: [
@@ -28,6 +29,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify('development') })
+        new webpack.DefinePlugin({ 'process.env.NODE_ENV': nodeEnv })
     ]
 };
