@@ -3,6 +3,8 @@ require('babel-core/register');
 const path = require('path');
 const webpack = require('webpack');
 
+const nodeEnv = JSON.stringify(process.env.NODE_ENV || 'development');
+
 module.exports = {
     devtool: 'source-map',
     entry: {
@@ -57,6 +59,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify('development') })
+        new webpack.DefinePlugin({ 'process.env.NODE_ENV': nodeEnv })
     ]
 };
