@@ -7,8 +7,8 @@
     "test": "NODE_ENV=testing karma start --single-run",
     "test:cov": "COVERAGE=true NODE_ENV=testing karma start --single-run",
     "lint": "eslint --ext .js,.jsx ./",
-    "start:dev": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.js --inline --hot",
-    "start:server": "http-server -p 8000 | npm run start:dev",
+    "start:webpack": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.js --inline --hot",
+    "start:dev": "http-server -p 8000 | npm run start:webpack",
     "build:dev": "webpack --config webpack.config.js",
     "build": "NODE_ENV=production webpack -p --config webpack.config.js"
   },

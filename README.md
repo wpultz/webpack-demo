@@ -38,7 +38,7 @@ with their own entry point in the webpack config.
 
 Branch `hmre` illustrates enabling hot module reloading in webpack.
 
-* `start:dev` script in `package.json`, where the `--hot` flag is added to 
+* `start:dev` script in `package.json`, where the `--hot` flag is added to
 webpack-dev-server start script.
 
 ## React Hot Loading
@@ -65,7 +65,7 @@ Button component are imported.
 Branch `run-with-dev-server`illustrates running webpack-dev-server along with
 another backend server, in this case node `http-server`. Points of interest:
 
-* npm script `start:server` starts webpack-dev-server and node http-server
+* npm script `start:dev` starts webpack-dev-server and node http-server
 * the node http-server will run on port 8000.
 * in the [webpack config](webpack.config.js), the `devServer` key specifies the
 `Access-Control-Allow-Origin` header to allow the node http-server to request
