@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 
 require('../sass/main.scss');
 
-import Thing from '../components/Thing';
+import Thing from '../../common/Thing';
 
 export default class Main extends React.Component {
     static propTypes = {
