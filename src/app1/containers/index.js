@@ -8,7 +8,7 @@ require('../sass/main.scss');
 const Main = () => {
     return (
         <div>
-            <Button>cool beans</Button>
+            <Button>kool beans</Button>
         </div>
     );
 };
