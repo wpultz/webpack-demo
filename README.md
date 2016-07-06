@@ -6,6 +6,7 @@ builds upon the last up to fairly robust webpack configuration including hot
 module reloading, react hot loading, sass loading, and react-bootstrap.
 
 Each branch has three npm scripts of interest.
+
 1. `start:dev` starts webpack-dev-server
 2. `build:dev` builds the bundles for the project
 3. `build` builds the production bundles for the project
@@ -23,16 +24,22 @@ project.
 
 Branch `simple-with-css` illustrates a simple webpack config with a sass loader.
 
+* sass loader in [webpack config](webpack.config.js)
+* require a sass file in the [main react component](src/app1/containers/Main.js)
+
 ## Multiple Entry Points
 
 Branch `multiple-entry` illustrates a webpack config with two react apps, each
 with their own entry point in the webpack config.
 
+* entry for app1 and app2 in [webpack config](webpack.config.js)
+
 ## Webpack Hot Module Reloading
 
-Branch `hmre` illustrates enabling hot module reloading in webpack. The major
-point of interest here is the `start:dev` script in `package.json`, where the
-`--hot` flag is added to webpack-dev-server start script.
+Branch `hmre` illustrates enabling hot module reloading in webpack.
+
+* `start:dev` script in `package.json`, where the `--hot` flag is added to 
+webpack-dev-server start script.
 
 ## React Hot Loading
 
@@ -41,15 +48,15 @@ webpack. The points of interest here are:
 
 * the `start:dev` script where the `--hot` flag is added to starting the dev
 server and the entries in the webpack config.
-* the inclusion of different entries if the it is a production build.
+* the inclusion of different entries if it is a production build.
 
 ## react-bootstrap
 
 Branch `react-boostrap` illustrates how to add react-bootstrap to your react
 appication. Points of interest are :
 
-* The extra loaders specified in the webpack config to handle fonts, svgs, and
-images.
+* The extra loaders specified in the [webpack config](webpack.config.js) to
+handle fonts, svgs, and images.
 * In [app1](src/app1/containers/Main.js) where the bootstrap stylesheet and
 Button component are imported.
 
