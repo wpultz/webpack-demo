@@ -79,3 +79,20 @@ The `run-with-dev-server` branch does, in fact, point the pages to the
 webpack-dev-server instance. This means that when building your app for
 production, the script tag references would have to point to the locally
 built bundles. There are tools for this that aren't covered here.
+
+## Adding the CommonsChunkPlugin
+
+Branch `commons-chunk-plugin` illustrates using webpack's CommonsChunkPlugin.
+The plugin will accept the preloaded libs into the common bundle from the
+`shared` entry, as well as analyze the code to find modules shared between
+entries. In this case, the `Thing` react component is used in both app1 and
+app2. Run the `build:dev` script and check out the shared bundle code to see
+that the `Thing` component is now there.
+
+* Adding the CommonsChunkPlugin in the [webpack config](webpack.config.js)
+* Loading `react-bootstrap` into the common chunk with the `shared` entry in
+the [webpack config](webpack.config.js)
+* Created a react component used in both app1 and app2
+[Thing](src/common/Thing.jsx)
+* include references to the `shared` bundle script in both [app1](app1.html)
+and [app2](app2.html)
