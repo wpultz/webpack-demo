@@ -1,11 +1,11 @@
-require('babel-core/register');
+/* eslint-disable no-var */
+var path = require('path');
+var webpack = require('webpack');
 
-const path = require('path');
-const webpack = require('webpack');
+var nodeEnv = JSON.stringify(process.env.NODE_ENV || 'development');
 
-const nodeEnv = JSON.stringify(process.env.NODE_ENV || 'development');
-
-let entries;
+var entries;
+/* eslint-enable */
 if (process.env.NODE_ENV === 'production') {
     entries = {
         app1: './src/app1/app.js',
